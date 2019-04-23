@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+</head>
+
+<body>
+	<h1>hello world!</h1>
+	<form method="post" action="/login_action/">
+	<input name="username" type="text" placeholder="用户名"><br>
+	<input name="password" type="password" placeholder="密码"><br>
+		{{ error }}<br>
+	<button id="btn" type="submit">登录</button>
+	{% csrf_token %}
+	</form>
+</body>
+</html>
