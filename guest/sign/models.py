@@ -10,8 +10,8 @@ class Event(models.Model):
     start_time = models.DateTimeField('events time')    #发布会时间
     create_time = models.DateTimeField(auto_now=True)   #创建时间（自动获取当前时间）
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 
 #嘉宾表
@@ -23,8 +23,8 @@ class Guest(models.Model):
     sign = models.BooleanField()    #签到状态
     create_time = models.DateTimeField(auto_now=True)   #创建时间（自动获取当前时间）
 
-class Meta:
-    unique_together = ("event","phone")
+    class Meta:
+        unique_together = ("event","phone")
 
-def __str__(self):
-    return self.realname
+    def __str__(self):
+        return self.realname
